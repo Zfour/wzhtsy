@@ -7,7 +7,7 @@ var clock = new Vue({
     }
 });
 
-var week = ['SUN', 'MON', 'TUE', 'WED', 'FRI', 'SAT', 'SUN'];
+var week = ['SUN', 'MON', 'TUE', 'WED','THU' ,'FRI', 'SAT'];
 var timerID = setInterval(updateTime, 1000);
 updateTime();
 function updateTime() {

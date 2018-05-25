@@ -1,22 +1,10 @@
-$(function(){
-  $(".userMenu").on("click", "li", function(){
-    var sId = $(this).data("id"); //获取data-id的值
-    window.location.hash = sId; //设置锚点
-    loadInner(sId);
-  });
-  function loadInner(sId){
-    var sId = window.location.hash;
-    var pathn, i;
-    switch(sId){
-      case "#center": pathn = "blank1.html"; i = 0; break;
-　　　　　　　case "#account": pathn = "user_account.html"; i = 1; break;
-      case "#trade": pathn = "user_trade.html"; i = 2; break;
-      case "#info": pathn = "user_info.html"; i = 3; break;
-　　　　　　 default: pathn = "user_center.html"; i = 0; break;
-    }
-    $("#content").load(pathn); //加载相对应的内容
-    $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
-  }
-  var sId = window.location.hash;
-  loadInner(sId);
-});
+$('nav ul li ul li ul li a').on('click', function(e) {                 
+  e.preventDefault();  // 闃绘閾炬帴璺宠浆
+   var url = this.href;  // 淇濆瓨鐐瑰嚮鐨勫湴鍧�
+
+  $('nav  a.current').removeClass('current');    
+  $(this).addClass('current');                       
+ 
+ $('#container').remove();                          
+  $('#content').load(url + ' #container').fadeIn('slow'); // 鍔犺浇鏂板唴瀹?url鍦板潃涓庤鍦板潃涓嬬殑閫夋嫨鍣ㄤ箣闂磋鏈夌┖鏍?琛ㄧず璇rl涓嬬殑#container
+ });

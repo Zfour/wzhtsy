@@ -1,0 +1,582 @@
+   
+   <div id="container">
+   <div id="page-wrapper">
+            <div class="row">
+			<br>
+   <div class="col-lg-12 ">
+   <div class=" panel panel-default">
+   <div class="panel-heading">
+                            <i class="fa fa-file-text fa-fw"></i>&nbsp;来稿登记
+                        </div>
+<body bgcolor="#dee7ff"	background="../pimage/user/default/right_back1.gif"
+	style="font-size: 10pt" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+		<form name="paperInfoForm" method="post" action="/sjys/paper/paperInfo.do" enctype="multipart/form-data">
+			<input type="hidden" name="ARTICL_PATH" value="">
+			<input type="hidden" name="ARTICL_STATUS" value="1">
+			<input type="hidden" name="ARTICL_ID" value="">
+			<input type="hidden" name="ARTICL_ID_BAK" value=""><!-- wujing20110601 -->
+			<input type="hidden" name="ARTICL_PATH_BAK" value="">
+			<input type="hidden" name="PERIODICAL_TYPE" value="a">
+
+	<!--
+	<table border="0" cellpadding="0" cellspacing="0" width="100%"	bgcolor="#dee7ff" bordercolor="#FFFFFF" style="font-size: 10pt">
+		<tr>
+			<td width="100%" colspan="5"   align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"	bgcolor="#dee7ff" bordercolor="#FFFFFF" style="font-size: 10pt">
+					<tr height="35">
+						<td width="20"   align="center"	>
+							<i class="fa fa-search fa-fw"></i>
+						</td>
+						<td width="60"   align="center"	background="/sjys/images/face/show_title.gif">
+							<font >来稿登记</font>
+						</td>
+					
+						<td width="11"   align="center"	background="/sjys/images/face/show_title.gif">
+							<font >&nbsp;</font>
+						</td>
+						<td  align="center" background="/sjys/images/face/show_title.gif">
+							<font >&nbsp;</font>
+						</td>
+						
+					</tr>
+				</table>
+				
+			</td>
+		</tr>
+	</table>
+-->
+	<div id="m1Child" class="child" style="display:ndone">
+		<!--  <table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" style="font-size:10pt" width="90%" align="center">
+			<tr height="25">
+				<td width="15%" bgcolor="#dee7ff" valign="middle" align="left">
+					<font color="#000000">&nbsp;&nbsp;[论文信息]</font>
+				</td>
+				<td colspan=4 bgcolor="#dee7ff" align="right"></td>
+				<td colspan=2 bgcolor="#dee7ff" align="right">
+					<img src="/sjys/images/button/confirm.gif" style="cursor:hand" onclick="AddRecord ()">
+					&nbsp;&nbsp;
+					
+				</td>
+			</tr>
+			<tr>
+				<td height="3" width="100%" bgcolor="#dee7ff" colspan="7" background="/sjys/images/face/smallbar.gif"></td>
+			</tr>
+			<tr height="5" valign="bottom">
+				<td width="100%" bgcolor="#bdcfff" align="center" colspan="7"></td>
+			</tr>
+			<tr height="15" valign="bottom">
+				<td width="100%" bgcolor="#ffffff" align="center" colspan="7"></td>
+			</tr>
+		</table>
+	--><div color="red" class="col-lg-12 text-center alert alert-warning">
+	<br>
+	<b >友情提示：</b><br>
+	<p >该页面用于编辑部工作人员帮助已注册的作者(未注册的作者由编辑人员代为注册)提交稿件，点击“参照”按钮可选择（已注册的）通讯作者，其他项由编辑部人员填写，其中带（*）项为必填项</p>
+		<br>
+		<!--
+		<table align=center class=frametable border="0" cellspacing="1" cellpadding="3"  bgColor="#ffffff" width="100%">
+		 <tr height=25>
+		    <td align=left></td>
+		    <td width=100% align="left">
+		    <font id=fileid color="#ff0000"><b>友情提示：</b></font>
+		    </td>
+		  </tr>
+		  <tr height=25>
+		    <td align=left></td>
+		    <td width=100% align="left" style="line-height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <font id=fileid color="#ff0000">该页面用于编辑部工作人员帮助已注册的作者(未注册的作者由编辑人员代为注册)提交稿件，点击“参照”按钮可选择（已注册的）通讯作者，其他项由编辑部人员填写，其中带（*）项为必填项</font>
+		    </td>
+		  </tr>
+		</table>
+		-->
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0"	bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff"	tyle="font-size:10pt" width="90%" align="center">
+			<tr height="10"></tr> 
+             <tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>论文编号</label>
+				</td>
+				<td width="5%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" >
+					
+					<input class="form-control"  type="text" placeholder="自动分配" disabled >
+						
+					
+				</td>
+				<td width="15%" colspan=3 bgcolor="#ffffff" valign="middle" align="right"></td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+             <tr height="10"></tr>                           
+			
+          
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>通讯作者<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="" class="editbox form-control">
+				</td>
+									<td width=5>
+									&nbsp
+									<button style="cursor:hand" onclick="selectUser()  type="submit" class="btn btn-primary">参照</button>
+									
+									
+									
+								
+							</td>
+					</tr>
+					<tr height="10"></tr>    
+				<tr height="25" valign="bottom">	
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>全部作者<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>QQ</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="QQ" value="" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>微信号</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="WECHART" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			
+								
+			<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>工作单位<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_COMPANY" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>通讯地址<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_ADRESS" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>联系电话<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="OTHER_ADDRESS" value="" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>研究方向<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					
+					<select name="DIRECTION" class="combobox  form-control">ddd
+                            <option value="14"
+								>
+								DIRECTION
+							</option>
+						ddd
+                            <option value="15"
+								>
+								设计艺术
+							</option></select>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>基金类型</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					 
+					 <select name="FUNDING_TYPE" class="combobox  form-control"><option value="0" ></option>			
+					
+					<option value="1" >校级</option>			
+					
+					<option value="2" >市级</option>			
+					
+					<option value="3" >省级</option>			
+					
+					<option value="4" >部级</option>			
+					
+					<option value="5" >国家级</option>			
+					
+					<option value="6" >国防基金</option></select>
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>基金名称</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="FUNDING_NAME" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>中图法分类号</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="DOI" value="" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					&nbsp;
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					&nbsp;
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>										
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>论文标题<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_TITLE" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>论文摘要<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<textarea name="ARTICL_ABSTRACT" rows="8" style="WIDTH:100%" class="textareabox form-control"></textarea>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+						<tr height="10"></tr> 
+						<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>论文关键词<font id=fileid color="#ff0000">（*）</font></label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_KEYWORDS" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>英文标题</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_TITLE_EN" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>英文摘要</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<textarea name="ARTICL_ABSTRACT_EN" rows="8" style="WIDTH:100%" class="textareabox form-control"></textarea>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+<tr height="10"></tr> 			
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>英文关键词</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_KEYWORDS_EN" value="" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>	
+<tr height="10"></tr> 			
+			<tr height="25" valign="bottom" >
+				<td width="15%" bgcolor="#ffffff"></td>
+			 	<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left" >
+			    	<div class="alert alert-warning">
+				<font id=fileid >作者中文简介格式模板：张三（1963-），男，湖北省武汉人，武汉理工大学艺术学院教授；博士，主要从事中西方美学研究。</font>
+				</div>
+				</td> 
+			 	<td width="6%" bgcolor="#ffffff"></td>
+		   </tr>
+	   
+			<tr height="10" >
+				<td width="15%" bgcolor="#ffffff"></td>
+			 	<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left" ><div class="alert alert-warning">
+			    <font id=fileid >English format template of author brief introduction: John ( 1963- ), male, Wuhan, Hubei Province,Professor of Wuhan University of technology, school of art ; Dr, mainly engaged in the study of Western aesthetics.</font>
+					</div></td> 
+			 	<td width="6%" bgcolor="#ffffff"></td>
+		   </tr>
+<tr height="10"></tr> 		   
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+			<label>		作者中英文简介<font id=fileid color="#ff0000">（*）</font> </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<textarea name="INTRODUCTION_AUTHOR" rows="5" style="WIDTH:100%" class="textareabox form-control"></textarea>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+						<label>	作者文章说明</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<textarea name="ARTICL_MEM" rows="5" style="WIDTH:100%" class="textareabox form-control"></textarea>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom"><!-- wujing20110601 -->
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>工作提示</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+					<textarea name="MSG" rows="3" style="WIDTH:100%" class="textareabox form-control"></textarea>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			<tr height="25" valign="bottom">
+					<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+						<label>论文上传<font id=fileid color="#ff0000">（*）</font></label>
+					</td>
+					<td width="2%" bgcolor="#ffffff"></td>
+				
+					<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
+						<label class="alert alert-warning"><font id=fileid>上传论文仅支持DOC和PDF两种格式</font></label>
+						<input type="file" name="file" value="" style="width:100%">
+					</td>
+						<tr height="10"></tr>
+					<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height=30>
+				<td colspan=7 bgcolor="#ffffff"></td>
+			</tr>
+			<tr valign="bottom" align="center">
+				<td colspan=7  align="center">
+					<button style="cursor:hand" onclick="AddRecord() type="submit" class="btn btn-primary"> &nbsp;确定&nbsp;</button>
+					
+					
+					
+				</td>
+			</tr>
+			<tr height=30>
+				<td colspan=7 bgcolor="#ffffff"></td>
+			</tr>
+		</table>
+			</div>
+
+	</form>
+
+
+<script language="JavaScript">
+ function ExpandMenu (m1)
+{
+    if(m1=="m1")
+   {
+   m1Child.style.display="";
+   m2Child.style.display="none";
+    }
+   else  if(m1=="m2")
+   {
+   m1Child.style.display="none";
+   m2Child.style.display="";
+   }
+} 
+
+function AddRecord()
+{
+
+  if(document.forms[0].USER_NAMES.value=="")
+	{
+        alert("请输入全部作者姓名!  ");
+	  document.forms[0].USER_NAMES.focus();
+	 return;
+	}
+	 if(document.forms[0].DIRECTION.value=="0")
+	{
+        alert("请选择研究方向!");
+	  document.forms[0].DIRECTION.focus();
+	 return;
+	}
+
+	 if(document.forms[0].ARTICL_TITLE.value=="")
+	{
+        alert("请输入论文标题!  ");
+	  document.forms[0].ARTICL_TITLE.focus();
+	 return;
+	}
+	
+		if(document.forms[0].ARTICL_KEYWORDS.value=="")
+	{
+        alert("请输入论文关键词!  ");
+	  document.forms[0].ARTICL_KEYWORDS.focus();
+	 return;
+
+	}
+	
+		if(document.forms[0].ARTICL_ABSTRACT.value=="")
+	{
+        alert("请输入论文摘要!  ");
+	  document.forms[0].ARTICL_ABSTRACT.focus();
+	 return;
+	}	
+	
+			
+	
+		if(document.forms[0].INTRODUCTION_AUTHOR.value=="")
+	{
+        alert("请输入作者中英文简介!  ");
+	  document.forms[0].INTRODUCTION_AUTHOR.focus();
+	 return;
+	}	
+	
+	
+	
+	
+		if(document.forms[0].file.value=="")
+		{
+	      alert("上传论文不能为空！");
+		  document.forms[0].file.focus();
+		  return;
+		}
+	
+		if(!checkFileType(document.forms[0].file.value))
+	{
+	    alert("上传论文仅支持DOC和PDF两种格式!  ");
+		document.forms[0].file.focus();
+		return;
+	}
+    
+//马英哲 4.25
+ document.forms[0].submit();
+
+}
+
+function cancel()
+{
+ document.forms[0].action="searchPaper.do";
+ document.forms[0].submit();
+
+}
+
+function checkFileType(filename)
+{
+   var i=filename.lastIndexOf(".");   
+   var fileType=filename.substring(i);  
+   fileType=fileType.toUpperCase();
+    if(fileType==".DOC"||fileType==".PDF")
+	   return true;
+   return false;
+}
+
+function fileUploaded(filename)
+{
+  fileid.innerHTML=filename;
+  document.forms[0].ARTICL_PATH.value=filename;
+
+}
+
+function uploadFile()
+{
+  window.open("upload.do",'','left=200,top=130,location=no,width=400,height=300","toolbar=no,memubar=no,scrollbars=no,status=no,resizable=no');
+if ((document.window != null) && (!NewWnd.opener))
+  NewWnd.opener = document.window;
+}
+
+function selectUser()
+{
+  //lijgx
+  window.open("../system/edituser.do?flag=1&roleid=25&pop=yes",'','left=100,top=30,location=no,width=700,height=500","toolbar=yes,memubar=no,scrollbars=yes,status=no,resizable=no');
+if ((document.window != null) && (!NewWnd.opener))
+  NewWnd.opener = document.window;
+}
+
+function selectBack(strId,strName,strMEM,strTEL)
+{
+    document.forms[0].ARTICL_USER.value=strId;
+    document.forms[0].USER_NAME.value=strName;
+    document.forms[0].INTRODUCTION_AUTHOR.value=strMEM;
+    document.forms[0].OTHER_ADDRESS.value=strTEL;
+    document.forms[0].USER_NAMES.value=strName;
+}
+
+function CheckNUM(NUM)
+{
+ 	var i,j,strTemp;
+	strTemp="0123456789";
+ 	for (i=0;i<NUM.length;i++)
+	{
+		j=strTemp.indexOf(NUM.charAt(i));	
+		if (j==-1)
+		{
+ 			return false;
+		}
+	}
+ 	return true;
+}
+  
+function Enter2Tab() 
+{ 
+var e = document.activeElement; 
+if(e.tagName == "INPUT" && ( e.type == "text" || e.type == "password" || e.type == "checkbox" || e.type == "radio") || e.tagName == "SELECT") 
+	{ 
+		if(window.event.keyCode == 13) 
+		{ 
+		    window.event.keyCode = 9; 
+		} 
+	} 
+} 
+////////打开此功能请取消下行注释 
+document.onkeydown = Enter2Tab;
+
+</script>
+
+</body>
+       </div>
+	     </div>
+		 </div>
+	     </div>
+		     </div>
