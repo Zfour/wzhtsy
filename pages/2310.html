@@ -117,14 +117,14 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>稿件题目:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -135,7 +135,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>研究方向:</label>
@@ -164,14 +164,14 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>至:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -180,14 +180,14 @@
 			<!--
 		     <tr height=25>
 			    <td class="label_right" width=50><label>稿件编号: </label></td>
-				<td class="label_left"  width=150><input type="text" name="ARTICL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left"  width=150><input type="text" name="ARTICL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 		        <td class="label_right" width=100 align="left">稿件题目: &nbsp;</td>
-				<td class="label_left" width=150>	<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>				
+				<td class="label_left" width=150>	<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>				
 				<td class="label_right" width=140>送审日期范围: &nbsp;</td>
-				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 				<td width=10><A style="CURSOR: hand" onclick="GetDate (1)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
 				<td class="label_left" width=40>	至: &nbsp;</td>
-				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 				<td width=10><A style="CURSOR: hand" onclick="GetDate (2)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
 			 </tr>		
 -->			 
@@ -197,11 +197,11 @@
 				    
 			     
 						<td class="label_right" width=100>通讯作者: &nbsp;	</td>
-						<td class="label_left" width=150><input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+						<td class="label_left" width=150><input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 						
 							
 							
-								<input type="hidden" name="READER" value="" class="editbox form-control">
+								<input type="hidden" name="READER" value="" class="editbox form-control form-control">
 							
 						
 						<td class="label_right" width=135>研究方向: &nbsp;</td>
@@ -557,18 +557,18 @@
  
 <div class="label-group col-lg-12">
 			<label>发件人 </label>
-			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control form-control">
 			<br>
 			</div>
 			
 			<div class="label-group col-lg-12">
 			<label>收件人 </label>
-			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -1278,22 +1278,13 @@
 
 	</form>
 	
-	
-
  
 
 </body>
-       </div>
-      
-	     </div>
-                                
 
-                
+
   
-    </div>		
-	 </div>	
-       
-       <script language="javascript">
+    <script language="javascript">
 function doAction(actionID)
 {
   switch(actionID)
@@ -2504,5 +2495,19 @@ function Keysubmit()
   } 
 } 
 </script>
+	 <script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.js" charset="utf-8"></script> 
+   <script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.zh-CN.js" charset="utf-8"></script> 
+ <script type="text/javascript" src="../dist/js/timepickersetting.js" charset="utf-8"></script>
+       </div>
+      
+	     </div>
+                                
+
+                
+  
+    </div>		
+	 </div>	
+       
+   
        
 		</div>	

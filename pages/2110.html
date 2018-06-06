@@ -120,7 +120,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" value="" class="editbox form-control">
+					<input type="text" name="USER_NAME" value="" class="editbox form-control" required="required"   >
 				</td>
 									<td width=5>
 									&nbsp
@@ -139,7 +139,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" value="" class="editbox form-control">
+					<input type="text" name="USER_NAMES" value="" class="editbox form-control" required="required"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -170,7 +170,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_COMPANY" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_COMPANY" value="" class="editbox form-control"  required="required">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -181,7 +181,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_ADRESS" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_ADRESS" value="" class="editbox form-control"  required="required">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -192,7 +192,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="OTHER_ADDRESS" value="" class="editbox form-control">
+					<input type="text" name="OTHER_ADDRESS" value="" class="editbox form-control"  required="required">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>研究方向<font id=fileid color="#ff0000">（*）</font></label>
@@ -270,7 +270,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE" value="" class="editbox form-control" required="required">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -281,7 +281,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<textarea name="ARTICL_ABSTRACT" rows="8" style="WIDTH:100%" class="textareabox form-control"></textarea>
+					<textarea name="ARTICL_ABSTRACT" rows="8" style="WIDTH:100%" class="textareabox form-control" required="required"></textarea>
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -292,7 +292,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_KEYWORDS" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_KEYWORDS" value="" class="editbox form-control" required="required">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -356,7 +356,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<textarea name="INTRODUCTION_AUTHOR" rows="5" style="WIDTH:100%" class="textareabox form-control"></textarea>
+					<textarea name="INTRODUCTION_AUTHOR" rows="5" style="WIDTH:100%" class="textareabox form-control" required="required"></textarea>
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -391,7 +391,7 @@
 				
 					<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
 						<label class="alert alert-warning"><font id=fileid>上传论文仅支持DOC和PDF两种格式</font></label>
-						<input type="file" name="file" value="" style="width:100%">
+						<input type="file" name="file" type="file" accept="application/msword,application/pdf" value="" style="width:100%" required="required">
 					</td>
 						<tr height="10"></tr>
 					<td width="6%" bgcolor="#ffffff"></td>
@@ -1050,7 +1050,7 @@
 <!-----------------------------模态框 END------------------------------------>
 	</form>
 
-
+<!--
 <script language="JavaScript">
  function ExpandMenu (m1)
 {
@@ -1213,7 +1213,7 @@ if(e.tagName == "INPUT" && ( e.type == "text" || e.type == "password" || e.type 
 document.onkeydown = Enter2Tab;
 
 </script>
-
+-->
 </body>
        </div>
 	     </div>

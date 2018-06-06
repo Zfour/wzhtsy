@@ -164,14 +164,14 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>至:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -1400,7 +1400,7 @@
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，录用通知信件。" class="editbox form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -1459,7 +1459,7 @@
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，拒录通知信件。" class="editbox form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -3455,4 +3455,7 @@ function Keysubmit()
   } 
 } 
 </script>
+	<script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.js" charset="utf-8"></script> 
+   <script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.zh-CN.js" charset="utf-8"></script> 
+ <script type="text/javascript" src="../dist/js/timepickersetting.js" charset="utf-8"></script>
 		</div>	

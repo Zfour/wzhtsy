@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+	 
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../dist/css/clock.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">设计艺术研究杂志投稿管理系统</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+               
+      
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 修改个人信息</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-lock fa-fw"></i> 修改密码</a>
+                        </li>
+                         <li><a href="#"><i class="fa fa-question fa-fw"></i> 帮助</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>注销</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="chs">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+ 
+            <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav in" id="side-menu">
+                        <li class="sidebar-search">
+                         <div id="clock">
+                           <p class="date"><i class="fa fa-calendar-o   fa-fw"></i>{{ date }}</p>
+                          <p class="time">{{ time }}</p>
+                         </div> 
+                       
+                        </li>
+                    
+                        <li>
+                            <a href="index.html" class="current"><i class="fa fa-home fa-fw"></i>首页</a>
+                        </li>
+                          
+                        
+                        <li class="active">
+                            <a href="#"><i class="fa fa-file-text fa-fw  "></i> 编辑办公<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
+                                 <li>
+                                    <a href="#">稿件信息登记  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="2110.html">作者邮件来稿登记</a>
+                                        </li>
+                                        <li>
+                                            <a href="2120.html">作者邮件改稿登记</a>
+                                        </li>
+                                        <li>
+                                            <a href="2130.html">离线通过稿登记</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                               
+                                <li class="active">
+                                    <a href="#">值班审稿  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse in" aria-expanded="true" style="">
+                                        <li>
+                                            <a class="quicka active" href="2310.html">待初审稿件</a>
+                                        </li>
+                                        <li>
+                                            <a href="2320.html">初审结果管理</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                
+                               
+<!--
+<li>
+                                    <a href="#">送审管理（值班编辑/主管编辑） <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">改稿送审</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">补录送审信息（主编离线稿如约稿）*</a>
+                                        </li>
+                                    </ul>
+                                    
+</li>
+-->
+                                <li>
+                                    <a href="#">主编审稿管理  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="2610.html">稿件终审</a>
+                                        </li>
+                                        <li>
+                                            <a href="2620.html">终审结果处理</a>
+                                        </li>               
+                                      
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                 <li>
+                                    <a href="#">稿费管理  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="2410.html">未缴稿费稿件</a>
+                                        </li>
+										
+                                        <li>
+                                            <a href="2420.html">稿费收取历史</a>
+                                        </li>
+                                       
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                <li>
+                                    <a href="#">责编审稿管理  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="2810.html">稿件内容格式审查</a>
+                                        </li>
+                                        
+                                       
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                
+                               <li>
+                                    <a href="#">稿件信息中心  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                       
+                                        <li>
+                                            <a href="2920.html">审稿状态查询</a>
+                                        </li>
+                                        <li>
+                                            <a href="2930.html">审稿信息查询</a>
+                                        </li>
+                                         <li>
+                                            <a href="2940.html">信息提示与回复</a>
+                                        </li>
+                                
+                                        
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li> 
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                   
+                        <li>
+                            <a href="#"><i class="fa fa-th-list fa-fw"></i> 组版管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="flot.html">期刊信息管理</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">目录组版管理</a>
+                                </li>
+                            </ul>
+                           
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> 排版管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="flot.html">下载排版</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">排版信息管理</a>
+                                </li>
+                                
+                            </ul>
+                           
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-pencil-square-o fa-fw"></i> 编校管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                 <li>
+                                    <a href="#">送校管理 <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="#">送一校</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">送多校</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">送作者校</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#">校对管理 <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="#">编辑校对</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">校对结果</a>
+                                        </li>
+                                       
+                                    </ul>
+                                   
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bookmark  fa-fw"></i> 出版管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                 <li>
+                                    <a href="#">出版状态查询 </a>
+                                   
+                                </li>
+                                <li>
+                                    <a href="#">已出版稿件审稿信息</a>
+                                    
+                                </li>
+                            </ul>
+                           
+                        </li>
+						
+                         <li>
+                            <a href="#"><i class="fa fa-puzzle-piece  fa-fw"></i> 首页管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                 <li>
+                                    <a href="#">新闻信息管理 </a>
+                                   
+                                </li>
+                                <li>
+                                    <a href="#">期刊信息管理</a>
+                                    
+                                </li>
+                                  <li>
+                                    <a href="#">经典导读信息管理</a>
+                                    
+                                </li>
+                                   <li>
+                                    <a href="#">友情链接管理</a>
+                                    
+                                </li>                                  
+ <li>
+                                    <a href="#">下载中心管理</a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#">广告管理</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                    
+                 
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+<section id="content"><div id="container">
+   <div id="page-wrapper" style="min-height: 836px;">
+   
+            <div class="row">
+			<br>
+   <div class="col-lg-12 ">
+   <div class=" panel panel-default">
+   <div class="panel-heading">
+                            <i class="fa fa-file-text fa-fw"></i>&nbsp;待初审稿件
+                        </div>
+
+
+		<form name="searchForm" method="post" action="/sjys/paper/searchPaper.do">
+<input type="hidden" name="BUTTON_FLAG" value="">
+<input type="hidden" name="CURRENT_PAGE" value="1">
+<input type="hidden" name="TOTAL_PAGE" value="1">
+<input type="hidden" name="ARTICL_STATUS" value="2">
+
+	<!--
+	<table border="0" cellpadding="0" cellspacing="0" width="100%"	bgcolor="#dee7ff" bordercolor="#FFFFFF" style="font-size: 10pt">
+		<tr>
+			<td width="100%" colspan="5"   align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"	bgcolor="#dee7ff" bordercolor="#FFFFFF" style="font-size: 10pt">
+					<tr height="35">
+						<td width="20"   align="center"	>
+							<i class="fa fa-search fa-fw"></i>
+						</td>
+						<td width="60"   align="center"	background="/sjys/images/face/show_title.gif">
+							<font >来稿登记</font>
+						</td>
+					
+						<td width="11"   align="center"	background="/sjys/images/face/show_title.gif">
+							<font >&nbsp;</font>
+						</td>
+						<td  align="center" background="/sjys/images/face/show_title.gif">
+							<font >&nbsp;</font>
+						</td>
+						
+					</tr>
+				</table>
+				
+			</td>
+		</tr>
+	</table>
+-->
+	<div id="m1Child" class="child" style="display:ndone">
+		<!--  <table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" style="font-size:10pt" width="90%" align="center">
+			<tr height="25">
+				<td width="15%" bgcolor="#dee7ff" valign="middle" align="left">
+					<font color="#000000">&nbsp;&nbsp;[论文信息]</font>
+				</td>
+				<td colspan=4 bgcolor="#dee7ff" align="right"></td>
+				<td colspan=2 bgcolor="#dee7ff" align="right">
+					<img src="/sjys/images/button/confirm.gif" style="cursor:hand" onclick="AddRecord ()">
+					&nbsp;&nbsp;
+					
+				</td>
+			</tr>
+			<tr>
+				<td height="3" width="100%" bgcolor="#dee7ff" colspan="7" background="/sjys/images/face/smallbar.gif"></td>
+			</tr>
+			<tr height="5" valign="bottom">
+				<td width="100%" bgcolor="#bdcfff" align="center" colspan="7"></td>
+			</tr>
+			<tr height="15" valign="bottom">
+				<td width="100%" bgcolor="#ffffff" align="center" colspan="7"></td>
+			</tr>
+		</table>
+	-->
+	<!--
+	<div color="red" class="col-lg-12 text-center alert alert-warning">
+	<br>
+	<b >友情提示：</b><br>
+	<p >该页面用于编辑部工作人员帮助已注册的作者提交未经过本系统在线投审稿的稿件，点击“参照”按钮可选择（已注册的）通讯作者，其他项由编辑部人员填写，其中带（*）项为必填项，稿件提交后直接进入“期刊组版管理/目录组稿管理/待排版稿件”中 </p>
+		<br>
+		
+		<table align=center class=frametable border="0" cellspacing="1" cellpadding="3"  bgColor="#ffffff" width="100%">
+		 <tr height=25>
+		    <td align=left></td>
+		    <td width=100% align="left">
+		    <font id=fileid color="#ff0000"><b>友情提示：</b></font>
+		    </td>
+		  </tr>
+		  <tr height=25>
+		    <td align=left></td>
+		    <td width=100% align="left" style="line-height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <font id=fileid color="#ff0000">该页面用于编辑部工作人员帮助已注册的作者(未注册的作者由编辑人员代为注册)提交稿件，点击“参照”按钮可选择（已注册的）通讯作者，其他项由编辑部人员填写，其中带（*）项为必填项</font>
+		    </td>
+		  </tr>
+		</table>
+		
+        </div>-->
+	
+       <table class="col-lg-12 text-center alert alert-warning" style="FONT-SIZE: 10pt" bordercolor="#ffffff" cellspacing="0" cellpadding="0" width="100%" bgcolor="#ffffff" border="0">
+ 
+  <tbody><tr height="30">
+    <td align="center" width="20">
+         
+	</td>
+    <td nowrap="" align="left" width="150">
+          <font><b>查询&nbsp;&nbsp;&nbsp;&nbsp;共计(3)件</b></font>
+    </td>
+	<td>
+	     <font>&nbsp;</font>
+	</td>
+  </tr>
+  
+</tbody></table>
+        
+<!--Search-->
+        <table width="80%" cellspacing="0" cellpadding="0">
+		<tbody><tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>稿件编号:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>稿件题目:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>通讯作者:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>研究方向:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					
+					<select name="DIRECTION" class="combobox  form-control">ddd
+                            <option value="14">
+								DIRECTION
+							</option>
+						ddd
+                            <option value="15">
+								设计艺术
+							</option></select>
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>
+	
+	<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>送审日期范围:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>至:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>
+			
+			<!--
+		     <tr height=25>
+			    <td class="label_right" width=50><label>稿件编号: </label></td>
+				<td class="label_left"  width=150><input type="text" name="ARTICL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+		        <td class="label_right" width=100 align="left">稿件题目: &nbsp;</td>
+				<td class="label_left" width=150>	<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>				
+				<td class="label_right" width=140>送审日期范围: &nbsp;</td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td width=10><A style="CURSOR: hand" onclick="GetDate (1)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
+				<td class="label_left" width=40>	至: &nbsp;</td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td width=10><A style="CURSOR: hand" onclick="GetDate (2)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
+			 </tr>		
+-->			 
+<!--
+	 	     <tr height=25 align="left">
+				
+				    
+			     
+						<td class="label_right" width=100>通讯作者: &nbsp;	</td>
+						<td class="label_left" width=150><input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+						
+							
+							
+								<input type="hidden" name="READER" value="" class="editbox form-control">
+							
+						
+						<td class="label_right" width=135>研究方向: &nbsp;</td>
+						<td class="label_left" width=150>	
+						     <select name="DIRECTION" onkeydown="Keysubmit('search')" class="combobox"><option value="">	忽略	</option>
+						       <option value='14'  >DIRECTION</option><option value='15'  >设计艺术</option></select>
+						</td>					
+							
+						
+							<td align="center" colspan=3><IMG style="CURSOR: hand" src="../images/button/search.gif" onclick="doAction('search');">	&nbsp;&nbsp;</td>
+				  
+			  
+			</tr>
+			<TR>
+				<td width="100%" colSpan=10 class=search_bottom></td>
+			</TR>
+			-->
+			<tr>
+				<td width="100%" colspan="6" align="right" class="search_bottom"><button style="cursor:hand" onclick="doAction('search');" type="submit" class="btn btn-primary">查询</button></td>
+			</tr>
+			<tr height="20"></tr>
+		</tbody></table>
+		<!--Search-end-->
+		<table width="100%">
+			<tbody><tr>
+				<td width="100%" colspan="10" class="search_bottom2"></td>
+			</tr>
+		</tbody></table>
+
+   
+   
+       
+       <div class="panel-body row"><div class="col-sm-12"><table width="100%" class=" table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"><input type="checkbox" name="CHECKALL" value="true" onclick="checkALl()"></th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">提示</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">稿件编号</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">通讯作者</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">全部作者</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">稿件题目</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">研究方向</th>
+                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">投稿日期</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+	  <tr class="tableitemcenter">
+		 <td><input type="checkbox" name="CHECKID" value="2018-00001"></td>
+		 <td nowrap="" align="center">
+		  	
+		  	
+	  	 </td>
+		<td nowrap="" align="center">&nbsp;<a data-toggle="modal" data-target="#articlemessagetool" aria-hidden="true" style="cursor:pointer">2018-00003</a></td>
+			
+			
+				<td nowrap="" align="center">&nbsp;<a data-toggle="modal" href="#usermessagetool" aria-hidden="true">李祎</a> </td>
+						
+		<td align="center">&nbsp;李祎</td>
+		<td align="center"><a href="论文翻译.docx">&nbsp;浅析中国南北建筑中门窗风格差异化</a></td>
+		<td nowrap="" align="center">&nbsp;DIRECTION</td>
+		<!-- zbxg -->
+		
+		<td nowrap="" align="center">&nbsp;2018-05-16 </td>
+		 <!-- sc20110108 -->
+		    
+			
+			
+			                                                       
+	       
+				
+				
+				
+		        
+	        </tr>
+	
+	
+	  <tr class="tableitemcenter">
+		 <td><input type="checkbox" name="CHECKID" value="2018-00002"></td>
+		 <td nowrap="" align="center">
+		  	
+		  	
+	  	 </td>
+		<td nowrap="" align="center">&nbsp;<a data-toggle="modal" data-target="#articlemessagetool" aria-hidden="true" style="cursor:pointer">2018-00003</a></td>
+			
+			<td nowrap="" align="center">&nbsp;<a data-toggle="modal" href="#usermessagetool" aria-hidden="true">李祎</a> </td>
+		<td align="center">&nbsp;李祎</td>
+						
+		
+		<td align="center"><a href="Understanding Design Methods.pdf" target="_blank">&nbsp;从《小团圆》的封面设计看张爱玲的创作主张</a></td>
+		<td nowrap="" align="center">&nbsp;DIRECTION</td>
+		<!-- zbxg -->
+		
+		 
+		 <!-- sc20110108 -->
+		    
+			
+			
+			                                                       
+	       
+				
+		
+				<td nowrap="" align="center">&nbsp;2018-05-22 </td>
+		        
+	        </tr>
+	
+	
+	  <tr class="tableitemcenter">
+		 <td><input type="checkbox" name="CHECKID" value="2018-00004"></td>
+		 <td nowrap="" align="center">
+		  	
+		  	
+	  	 </td>
+		<td nowrap="" align="center">&nbsp;<a data-toggle="modal" data-target="#articlemessagetool" aria-hidden="true" style="cursor:pointer">2018-00004</a></td>
+			
+			
+				<td nowrap="" align="center">&nbsp;<a data-toggle="modal" href="#usermessagetool" aria-hidden="true">李祎</a> </td>
+						
+		<td align="center">&nbsp;李伟湛 杨先英</td>
+		<td align="center">&nbsp;产业转型升级需求下工业设计人才多层次培养模式研究</td>
+		<td nowrap="" align="center">&nbsp;设计艺术</td>
+		<!-- zbxg -->
+		
+		<td nowrap="" align="center">&nbsp;2018-05-22 </td>
+		 <!-- sc20110108 -->
+		    
+			
+			
+			                                                       
+	       
+				
+			 
+				
+		        
+	        </tr>
+	
+
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	     
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	    
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	    
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	     
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	     
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	    
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+
+	<tr class="tableitemcenter">
+	  	<td>&nbsp;</td>
+	  	<td nowrap="" align="center"></td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    <td nowrap="" align="center">&nbsp;</td>
+	    
+	     
+	      <!-- sc20110108 -->
+	     
+	    
+		
+		
+       <td nowrap="" align="center">&nbsp;</td>
+      </tr>
+                       </tbody>
+                            </table>
+           
+           
+<table class="frametable" border="0" width="100%"> 
+  <tbody><tr class="tableitemcenter" background="../images/list_top.gif">
+    <td align="left">
+        &nbsp;&nbsp; <a data-toggle="modal" data-target="#reviewarticles" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">审稿</a>
+		&nbsp;&nbsp; <a data-toggle="modal" data-target="#articlerejection" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">退稿</a>
+	&nbsp;&nbsp; <a data-toggle="modal" data-target="#delete" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">删除</a>
+ 
+	   	 
+    </td>
+    <td width="73" align="center">显示个数：</td>
+    <td width="56" align="center">
+	    <select name="PER_PAGE" onchange="pageNumChange()" class="combobox">
+            <option value="10" selected="">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+        </select>	  
+    </td>
+    <td width="90" align="center">第1页/共1页</td>
+    <td width="20" align="center"><i class="fa fa-angle-double-left   fa-fw" style=" cursor:pointer " onclick="javascript:pageChange('1')"></i></td>
+    <td width="20" align="center"><i class="fa fa-angle-left fa-fw" style=" cursor:pointer " onclick="javascript:pageChange('2')"></i></td>
+    <td width="20" align="center"><i class="fa fa-angle-right fa-fw" style=" cursor:pointer " onclick="javascript:pageChange('3')"></i></td>
+    <td width="20" align="center"><i class="fa fa-angle-double-right   fa-fw" style=" cursor:pointer " onclick="javascript:pageChange('4')"></i></td>
+  </tr>
+</tbody></table>
+           
+           
+           
+           </div></div>
+       
+  
+             
+ 	
+	 
+<!----LIST　TABLE TITLE AND BUTTON--->
+</div>
+
+	<!--					
+<TABLE style="FONT-SIZE:10pt" borderColor=#ffffff cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff border=0>
+  <TBODY>
+  	<TR height=20>  
+      <TD align=center width=20 background="../images/face/title_left.gif" bgColor=#ffffff>
+	    <IMG src="../images/file1.gif"></TD>
+      
+		 <TD align=left width=120 background="../images/face/title_left.gif" bgColor=#ffffff>
+		 <FONT color=#f7f7f7>待初审稿件</FONT></TD>
+      <TD width=10 background="../images/face/title_middle.gif" bgColor=#ffffff> 
+        <FONT color=#f7f7f7>&nbsp;</FONT> </TD>
+      <TD background="../images/face/title_right.gif" bgColor=#ffffff align=right>&nbsp; </TD>
+	</TR>
+  </TBODY>
+</TABLE>   
+-->
+                           
+
+	<!-----------------------------模态框 start------------------------------------>
+	<!---删除稿件--->
+ <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">删除稿件</h4>
+            </div>
+            <div class="modal-body">是否删除当前稿件，删除后将无法恢复。</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">删除</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!---退稿--->
+ <div class="modal fade" id="articlerejection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 50%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">退稿</h4>
+            </div>
+            <div class="modal-body">
+
+   
+<div class="row"> 
+ 
+<div class="label-group col-lg-12">
+			<label>发件人 </label>
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<br>
+			</div>
+			
+			<div class="label-group col-lg-12">
+			<label>收件人 </label>
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<br>
+			</div>
+ <div class="label-group col-lg-12">
+			<label>邮件主题 </label>
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control">
+			<br>
+			</div>
+ <div class="label-group col-lg-12">
+			<label><b>邮件内容</b> </label>
+			<iframe style="WIDTH: 100%; HEIGHT: 460px" frameborder="0" scrolling="auto" src="fwbbjqtg/index.html"></iframe>
+			 
+			</div>
+
+
+
+ 
+ 
+
+		
+			 
+       
+
+
+
+ <!-- 添加510 -->
+
+ 
+</div>			
+			
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">发送邮件</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!---审稿--->
+ <div class="modal fade" id="reviewarticles" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">审稿</h4>
+            </div>
+            <div class="modal-body">
+			<table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" style="font-size:10pt" align="center">
+      
+       
+      
+	     
+	 
+	 
+	  <tbody><tr height="25" valign="bottom">
+			<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>稿件编号:</b></td>
+		 	<td width="5%" bgcolor="#ffffff"></td>
+			<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+		        2018-00002
+		    </td>
+		 	<td width="15%" bgcolor="#ffffff"></td>
+	  </tr>		
+	 
+	 
+	  <tr height="25" valign="bottom">
+			<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>稿件标题:</b></td>
+		 	<td width="5%" bgcolor="#ffffff"></td>
+			<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+		      	<input type="hidden" name="ARTICL_TITLE" value="从《小团圆》的封面设计看张爱玲的创作主张">
+		        从《小团圆》的封面设计看张爱玲的创作主张
+		    </td>
+		  <td width="15%" bgcolor="#ffffff"></td>
+	  </tr>
+
+<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>论题价值:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="TITLE_PROPERLY" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">很大学术价值&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="TITLE_PROPERLY" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">有一定学术价值&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="TITLE_PROPERLY" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">略有价值&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="TITLE_PROPERLY" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">无学术价值&nbsp;&nbsp;&nbsp;&nbsp;   
+	    </td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>内容提要:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+		 <input type="radio" name="ACADEMY_LEVEL" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">扼要精当&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="ACADEMY_LEVEL" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">比较准确&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="ACADEMY_LEVEL" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">基本符合&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="ACADEMY_LEVEL" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">没有事实&nbsp;&nbsp;&nbsp;&nbsp;  
+	 	</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>	研究方法:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+		 	<input type="radio" name="INNOVATION" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">有突破或创新&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="INNOVATION" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">正确运用传统方法&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="INNOVATION" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">比较得当&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="INNOVATION" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">不科学&nbsp;&nbsp;&nbsp;&nbsp; 
+	 	</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>材料运用:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="MEANING_CLEAR" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">丰富而有新发展&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="MEANING_CLEAR" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">全面而有新补充&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="MEANING_CLEAR" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">基本可靠&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="MEANING_CLEAR" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">多属转抄&nbsp;&nbsp;&nbsp;&nbsp; 
+		</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>	论证逻辑: </b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="ORGANIZED_LOGICAL" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">周密、科学&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="ORGANIZED_LOGICAL" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">言之有理&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="ORGANIZED_LOGICAL" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">较有条理&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="ORGANIZED_LOGICAL" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">混乱而矛盾 &nbsp;&nbsp;&nbsp;&nbsp;
+	    </td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>	总体评价: </b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">   
+		 <input type="radio" name="REFERENCE_PROPERLY" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">有创新&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="REFERENCE_PROPERLY" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">较有新意&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="REFERENCE_PROPERLY" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">见解平常&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="radio" name="REFERENCE_PROPERLY" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">少有价值 &nbsp;&nbsp;&nbsp;&nbsp;	     
+	 	</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr> 
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>评审结论:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="READ_RESULT" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">可以发表&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="READ_RESULT" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">修改后可以发表&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="READ_RESULT" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">修改后再审&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="READ_RESULT" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">不宜发表  &nbsp;&nbsp;&nbsp;&nbsp; 
+		</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="10" valign="bottom"></tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>稿件重复率:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+		<div class="input-group" style="width:15%">
+			<input name="REPEAT_RATE" type="text" class="form-control">
+			<span class="input-group-addon">%</span>
+		</div>
+		</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25">
+	    <td bgcolor="#ffffff" colspan="4"> <hr width="75%" class="hr0"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>审稿自信度:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="SELF_CONFIDENT" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">非常自信&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="SELF_CONFIDENT" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">比较自信&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="SELF_CONFIDENT" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">一般自信&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="SELF_CONFIDENT" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">无自信&nbsp;&nbsp;&nbsp;&nbsp;  
+		</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>对稿件的熟悉程度:</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+			<input type="radio" name="FAMILIARITY" value="1" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">非常熟悉&nbsp;&nbsp;&nbsp;&nbsp;  
+			<input type="radio" name="FAMILIARITY" value="2" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">比较熟悉&nbsp;&nbsp;&nbsp;&nbsp;  
+			<input type="radio" name="FAMILIARITY" value="3" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">一般熟悉&nbsp;&nbsp;&nbsp;&nbsp;  
+			<input type="radio" name="FAMILIARITY" value="4" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;">不熟悉&nbsp;&nbsp;&nbsp;&nbsp;     
+		</td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	<tr height="25">
+	   <td bgcolor="#ffffff" colspan="4"><hr width="75%" class="hr0"></td>
+	</tr>
+	<tr height="25" valign="bottom">
+		<td width="30%" bgcolor="#ffffff" valign="middle" align="right"><b>审稿意见</b></td>
+	 	<td width="5%" bgcolor="#ffffff"></td>
+		<td width="50%" bgcolor="#ffffff" valign="middle" align="left">
+	        <textarea name="READ_OPTION" rows="10" style="WIDTH:100%" class="textareabox form-control"></textarea>
+	    </td>
+	 	<td width="15%" bgcolor="#ffffff"></td>
+	</tr>
+	
+	<tr height="30"><td colspan="7" bgcolor="#ffffff"></td></tr>
+	   
+
+</tbody></table> 
+			
+			
+			
+			
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">提交 </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!---用户详情--->
+<div class="modal fade" id="usermessagetool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+                <h4 class="modal-title" id="myModalLabel">用户详情</h4>
+            </div>
+            <div class="modal-body">
+			<ul id="myTab" class="nav nav-tabs">
+	<li class="active">
+		<a href="#userattribute" data-toggle="tab">
+			 属性
+		</a>
+	</li>
+	<li><a href="#userstatistical" data-toggle="tab">统计</a></li>
+	 
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="userattribute">
+<br>
+<div class="col-lg-12 text-center alert alert-warning">
+		 <table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#FFFFFF" style="font-size:10pt">
+      <tbody><tr>
+	  
+        <td>
+          <font>用户ID:</font>
+        </td>
+        <td>499984532@qq.com</td>
+		 
+        <td valign="middle" align="center">
+          <font>用户姓名:</font>
+        </td>
+        <td valign="middle">
+         朱付鄂</td>
+		 
+        <td valign="middle" align="center">
+          <font>用户类型:</font>
+        </td>
+        <td valign="middle">
+         投稿用户  
+        </td>
+         
+	 </tr>
+     <tr>
+         
+      </tr>
+    </tbody></table>
+	</div>
+	<table width="100%" class=" table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
+  
+
+      <tbody><tr height="25">
+       <td width="12%" nowrap="" valign="middle" align="center"><b>姓名</b></td>
+       <td width="30%" valign="middle" align="left">&nbsp;
+           朱付鄂
+	   </td>
+       <td width="12%" nowrap="" valign="middle" align="center"><b>Email</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+         499984532@qq.com
+	   </td>
+     </tr>
+     <tr height="25" valign="bottom">
+        <td width="12%" nowrap="" valign="middle" align="center"><b>性别</b></td>
+		<td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+ 	    男
+ 	     </td>
+ 	    <td width="12%" nowrap="" valign="middle" align="center"><b>出生年月日</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+         
+		</td>
+ 	  </tr>
+      <tr height="25" valign="bottom">
+        <td width="12%" nowrap="" valign="middle" align="center"><b>学历</b></td>
+        <td width="30%" nowrap="" valign="middle" align="left">&nbsp;      
+	        
+ 	    </td>
+        <td width="12%" nowrap="" valign="middle" align="center"><b>职称</b></td>
+        <td width="30%" nowrap="" valign="middle" align="left">&nbsp;	    
+		    
+ 	    </td>
+ 	  </tr>
+
+      <tr height="25">
+           <td width="12%" nowrap="" valign="middle" align="center"><b>联系电话</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+       
+		</td>
+             <td width="12%" nowrap="" valign="middle" align="center"> <b>工作单位</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+           
+		</td>
+     </tr>
+       <tr height="25">
+       	
+	   	
+        <td width="12%" nowrap="" valign="middle" align="center"><b>身份号</b></td>
+       	 
+		
+          
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+        
+		</td>
+		 <td width="12%" nowrap="" valign="middle" align="center"><b>国家</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+        
+		</td>
+     </tr>
+     
+     <tr height="25">
+        <td width="12%" nowrap="" valign="middle" align="center"><b>省</b></td>
+		<td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+       
+		</td>
+		  <td width="12%" nowrap="" valign="middle" align="center"><b>城市</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+        
+		</td>
+     </tr>
+     
+      <tr height="25">
+		 <td width="12%" nowrap="" valign="middle" align="center"> <b>通信地址</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+         
+		</td>
+        <td width="12%" nowrap="" valign="middle" align="center"><b>邮政编码</b></td>
+       <td width="30%" nowrap="" valign="middle" align="left">&nbsp;
+        
+		</td>
+     </tr>
+     
+     
+    
+   <tr height="25">
+        <td width="12%" nowrap="" valign="middle" align="center"><b>研究方向</b></td> 
+        <td width="80%" valign="middle" align="left" colspan="3">&nbsp;
+        <!-- zhangbing0901 -->
+ 	    DIRECTION 
+ 	   </td>
+   </tr>
+         
+   <tr height="60">
+       <td width="12%" nowrap="" valign="middle" align="center"><b>学科方向及简历</b></td>
+       <td width="80%" valign="middle" align="left" colspan="3" style="word-wrap:break-word;">&nbsp;
+       
+	   </td>
+   </tr>
+     </tbody></table>
+		
+	</div>
+	<div class="tab-pane fade" id="userstatistical">
+	<br>
+		<div class="col-lg-12 text-center alert alert-warning">
+		 <table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#FFFFFF" style="font-size:10pt">
+      <tbody><tr>
+	  
+        <td>
+          <font>用户ID:</font>
+        </td>
+        <td>499984532@qq.com</td>
+		 
+        <td valign="middle" align="center">
+          <font>用户姓名:</font>
+        </td>
+        <td valign="middle">
+         朱付鄂</td>
+		 
+        <td valign="middle" align="center">
+          <font>用户类型:</font>
+        </td>
+        <td valign="middle">
+         投稿用户  
+        </td>
+         
+	 </tr>
+     <tr>
+         
+      </tr>
+    </tbody></table>
+	</div>
+	<table width="100%" class=" table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
+  <thead>
+  <tr role="row"> 
+  <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">序号</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">稿件编号</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">标题</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">所处状态</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">研究方向</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">投稿日期</th>
+ <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">稿费</th>
+
+                                         
+                                         
+                                    </tr>
+ </thead>
+
+
+
+
+  <tbody><tr class="tableitemcenter">
+ 
+  	<td>1</td>
+ 
+    <td nowrap="" align="center">&nbsp;<a data-toggle="modal" data-target="#articlemessagetool" aria-hidden="true" style="cursor:pointer">2018-00003</a></td>
+    <td nowrap="" align="center">&nbsp;测试 </td>
+    <td nowrap="" align="center">&nbsp;已录用</td>
+    <td nowrap="" align="center">&nbsp;DIRECTION</td>
+    <td nowrap="" align="center">&nbsp;2018-05-18</td>
+    <td nowrap="" align="center">&nbsp;</td>
+  
+  </tr>
+ 
+ 
+  
+
+  <tr class="tableitemcenter">
+ 
+  	<td>2</td>
+    <td nowrap="" align="center">&nbsp;<a href="Javascript:viewPaper('2018-00005')">2018-00005</a></td>
+    <td nowrap="" align="center">&nbsp;111 </td>
+    <td nowrap="" align="center">&nbsp;退稿</td>
+    <td nowrap="" align="center">&nbsp;设计艺术</td>
+    <td nowrap="" align="center">&nbsp;2018-05-24</td>
+    <td nowrap="" align="center">&nbsp;</td>
+   
+  </tr>
+ 
+ 
+  
+
+  <tr class="tableitemcenter">
+ 
+  	<td>3</td>
+    <td nowrap="" align="center">&nbsp;<a href="Javascript:viewPaper('2018-00006')">2018-00006</a></td>
+    <td nowrap="" align="center">&nbsp;测似111 </td>
+    <td nowrap="" align="center">&nbsp;撤稿</td>
+    <td nowrap="" align="center">&nbsp;DIRECTION</td>
+    <td nowrap="" align="center">&nbsp;2018-05-24</td>
+    <td nowrap="" align="center">&nbsp;</td>
+  
+  </tr>
+ 
+ 
+  
+
+  <tr class="tableitemcenter">
+ 
+  	<td>4</td>
+    <td nowrap="" align="center">&nbsp;<a href="Javascript:viewPaper('2018-00007')">2018-00007</a></td>
+    <td nowrap="" align="center">&nbsp;1 </td>
+    <td nowrap="" align="center">&nbsp;审稿中</td>
+    <td nowrap="" align="center">&nbsp;DIRECTION</td>
+    <td nowrap="" align="center">&nbsp;2018-05-28</td>
+    <td nowrap="" align="center">&nbsp;</td>
+ 
+  </tr>
+ 
+ 
+  
+  
+ 
+ 
+
+</tbody></table>
+ 
+	</div>
+	
+</div>
+			
+			
+			</div>
+            <div class="modal-footer">
+          
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!---稿件信息--->
+	<div class="modal fade" id="articlemessagetool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document" style="width: 60%;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					稿件信息
+				</h4>
+			</div>
+			<div class="modal-body">
+			
+					 
+					 
+					
+							<table width="100%" class=" table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
+								<tbody><tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										论文编号
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										2018-00003
+									</td>
+								</tr>
+								
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										稿件标题
+									</td>
+
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										测试
+									</td>
+								</tr>
+								
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										英文标题
+									</td>
+
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										通讯作者Email
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										499984532@qq.com
+									</td>
+
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										全部作者
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										朱付鄂
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										联系电话
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										研究方向
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										DIRECTION
+									</td>
+
+								</tr><tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										基金类型
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										基金名称
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										中图法分类号
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										摘要
+									</td>
+
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										测试
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										英文摘要
+									</td>
+
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										关键词
+									</td>
+
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										测试
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										英文关键词
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										作者中英文简介
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										测试
+									</td>
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										作者文章说明
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+								</tr>
+								
+								<tr height="25" valign="bottom"><!-- wujing20110601 -->
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										<font color="red">工作提示</font>
+									</td>
+									<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">&nbsp;
+									 
+									</td>
+								</tr>
+								
+								
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										应缴审稿费
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										实缴审稿费
+									</td>
+
+									<td width="25%" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										
+									</td>
+
+								</tr>
+								<tr height="25" valign="bottom">
+									<td width="12%" bgcolor="#ffffff" valign="middle" align="center">
+										下载论文
+									</td>
+
+									<td bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										<font id="fileid"><a href="javascript:viewFile()">
+												点击下载论文 </a>
+										</font>
+									</td>
+									
+									
+									<td colspan="3" bgcolor="#ffffff" valign="middle" align="left">&nbsp; 
+										<font id="fileid">
+											<b>无原稿备份 </b>	
+										</font>
+								
+								
+							
+								
+							
+							
+							
+							</td></tr></tbody></table>
+					
+			
+			</div>
+			<div class="modal-footer">
+				
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->					
+<!-----------------------------模态框 END------------------------------------>
+
+	</form>
+	
+	
+
+ 
+
+
+       </div>
+      
+	     </div>
+                                
+
+                
+  
+    </div>		
+	 </div>	
+       
+       
+       
+
+
+<!-- shuchao12.06 -->
+
+       
+		</div></section>
+            <!-- /.row -->
+          
+        <!-- /#page-wrapper -->
+ 
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../dist/js/jq-load.js" charset="utf-8"></script>
+   
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    
+
+     <script type="text/javascript" src="../dist/js/vue.min.js" charset="utf-8"></script>
+            
+ <script type="text/javascript" src="../dist/js/clock.js" charset="utf-8"></script>
+  
+   <script type="text/javascript" src="../dist/js/jquery.media.js" charset="utf-8"></script> 
+   
+   
+
+
+
+
+</body>
+
+</html>
