@@ -7,7 +7,7 @@
    <div class="col-lg-12 ">
    <div class=" panel panel-default">
    <div class="panel-heading">
-                            <i class="fa fa-file-text fa-fw"></i>&nbsp;期刊信息管理
+                            <i class="fa fa-file-text fa-fw"></i>&nbsp;目录组版管理
                         </div>
 <body bgcolor="#dee7ff"	background="../pimage/user/default/right_back1.gif"
 	style="font-size: 10pt" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -115,67 +115,81 @@
         <table width="80%" cellspacing="0" cellpadding="0">
 		<tr height="25" valign="bottom">
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
-					<label>期刊ID:</label>
+					<label>稿件编号:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="PERIODICAL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
-					<label>是否出版:</label>
+					<label>稿件题目:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<select name="PUBLISH_FLAG" class="combobox  form-control"> 
-                             <option value="0"
-								>
-								忽略
-							</option>
-							<option value="1"
-								>
-								预览版
-							</option>
-						 
-                            <option value="2"
-								>
-								未出版
-							</option></select>
+					<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
 			<tr height="10"></tr>
 			<tr height="25" valign="bottom">
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
-					<label>出版日期:</label>
+					<label>通讯作者:</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="PUBLISH_DATE_FACT" value="" onkeydown="Keysubmit('search')" class="editbox form-control"  >
-					
+					<input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control">
 				</td>
-				<td width="100%" colSpan=3 align="right" class=search_bottom><button style="cursor:hand"  onclick="doAction('search');"  type="submit" class="btn btn-primary">查询</button></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>研究方向:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					
+					<select name="DIRECTION" class="combobox  form-control">ddd
+                            <option value="14"
+								>
+								DIRECTION
+							</option>
+						ddd
+                            <option value="15"
+								>
+								设计艺术
+							</option></select>
+				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
-
-				
-			
-		 
- 
+			<tr height="10"></tr>
 	
- 
+	<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>送审日期范围:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
+				</td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>至:</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly data-date-format="yyyy-mm-dd">
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
 			<tr height="10"></tr>
 			
 			<!--
 		     <tr height=25>
 			    <td class="label_right" width=50><label>稿件编号: </label></td>
-				<td class="label_left"  width=150><input type="text" name="ARTICL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left"  width=150><input type="text" name="ARTICL_ID" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 		        <td class="label_right" width=100 align="left">稿件题目: &nbsp;</td>
-				<td class="label_left" width=150>	<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>				
+				<td class="label_left" width=150>	<input type="text" name="ARTICL_TITLE" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>				
 				<td class="label_right" width=140>送审日期范围: &nbsp;</td>
-				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE1" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 				<td width=10><A style="CURSOR: hand" onclick="GetDate (1)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
 				<td class="label_left" width=40>	至: &nbsp;</td>
-				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+				<td class="label_left" width=150><input type="text" name="SUBMIT_DATE2" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 				<td width=10><A style="CURSOR: hand" onclick="GetDate (2)"> <img src="../images/sel_date.gif" align="center" border="0"></A></td>
 			 </tr>		
 -->			 
@@ -185,11 +199,11 @@
 				    
 			     
 						<td class="label_right" width=100>通讯作者: &nbsp;	</td>
-						<td class="label_left" width=150><input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control"></td>
+						<td class="label_left" width=150><input type="text" name="NAME" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control"></td>
 						
 							
 							
-								<input type="hidden" name="READER" value="" class="editbox form-control">
+								<input type="hidden" name="READER" value="" class="editbox form-control form-control">
 							
 						
 						<td class="label_right" width=135>研究方向: &nbsp;</td>
@@ -207,7 +221,9 @@
 				<td width="100%" colSpan=10 class=search_bottom></td>
 			</TR>
 			-->
-			
+			<TR>
+				<td width="100%" colSpan=6 align="right" class=search_bottom><button style="cursor:hand"  onclick="doAction('search');"  type="submit" class="btn btn-primary">查询</button></td>
+			</TR>
 			<tr height="20"></tr>
 		</table>
 		<!--Search-end-->
@@ -229,10 +245,7 @@
 										<th  class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >研究方向</th>
                                         <th  class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >投稿日期</th>
 
-                                         <th  class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >所在期号</th>
-                                       
-                                        <th  class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >稿件状态</th>
-                                        <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >责编</th>
+                                         <th class="text-center tabletitle sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" >责编</th>
                                          
                                          
                                     </tr>
@@ -251,8 +264,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -268,8 +280,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+		  
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -287,8 +298,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -308,8 +318,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+		 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -327,8 +336,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -346,8 +354,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -365,8 +372,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+		 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -384,8 +390,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -402,8 +407,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+	 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -421,8 +425,7 @@
 						&nbsp;DIRECTION
 			</td>
 	<td  align="center">2018-05-22</td>
-		<td    nowrap align="center">  </td>
-		<td   nowrap align="center">初审 </td> 
+		 
 				<td   nowrap align="center">&nbsp;<A data-toggle="modal" href="#usermessagetool" aria-hidden="true"  >朱付鄂</A> </td>
               
 	  </tr>
@@ -432,10 +435,12 @@
            
            
 <table class="frametable" border=0 width=100% > 
-  <tr class="tableitemcenter" background="../images/list_top.gif">
+  <tr class="tableitemcenter"  >
     <td align=left>
-        &nbsp;&nbsp; <button style="cursor:hand" onclick="javascript:doAction('toread1')"  type="submit" class="btn btn-primary">信息录入与回复</button>
-		
+       &nbsp;&nbsp; <A data-toggle="modal" data-target="#editor" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">编辑稿件信息</A>
+	    &nbsp;&nbsp; <A data-toggle="modal" data-target="#paperorder" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">稿件排版</A>
+		 &nbsp;&nbsp; <A data-toggle="modal" data-target="#recheck" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">返回格式审查</A>
+		 &nbsp;&nbsp; <A data-toggle="modal" data-target="#articlerejection" aria-hidden="true" style="cursor:pointer" class="btn btn-primary">退稿</A>
 
 	 	 
     </td>
@@ -479,7 +484,500 @@
 </TABLE>   
 -->
  <!-----------------------------模态框 start------------------------------------>
-<!---缴费凭证--->
+<!---稿件排版--->
+ <div class="modal fade" id="paperorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">稿件排版</h4>
+            </div>
+            <div class="modal-body">
+			
+			<table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" tyle="font-size:10pt" align="center">
+			<tbody><tr height="10"></tr> 
+             <tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>期刊年份</label>
+				</td>
+				<td width="5%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff">
+					
+					 <select name="YEAR" class="combobox  form-control">
+					 <option value="0">2018</option>			
+					
+					<option value="1">2017</option>			
+					
+					<option value="2">2016</option>			
+					
+					<option value="3">2015</option>			
+					
+					<option value="4">2014</option>			
+						
+					 </select>
+						
+					
+				</td>
+				<td width="15%" colspan="3" bgcolor="#ffffff" valign="middle" align="right"></td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr> 
+			 <tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>期刊期数</label>
+				</td>
+				<td width="5%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff">
+					<select name="YEAR" class="combobox  form-control">
+					 <option value="0">第一期</option>			
+					
+					<option value="1">第二期</option>			
+					
+					<option value="2">第三期</option>			
+					
+					<option value="3">第四期</option>			
+					
+					<option value="4">第五期</option>			
+					
+					<option value="5">第六期</option>
+					 </select>
+						
+					
+				</td>
+				<td width="15%" colspan="3" bgcolor="#ffffff" valign="middle" align="right"></td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+             <tr height="10"></tr>
+			 <tr height="25" valign="bottom">
+				<td width="20%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>论文编号</label>
+				</td>
+				<td width="5%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff">
+					
+					<input class="form-control" type="text" value=" 2018-00006" disabled="">
+						
+					
+				</td>
+				<td width="15%" colspan="3" bgcolor="#ffffff" valign="middle" align="right"></td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+             <tr height="10"></tr>                           
+			
+          
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>起始页码 </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="  " class="editbox form-control form-control"  >
+				</td>
+									 
+					</tr>
+					 
+				 
+			 
+			 
+			
+			<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>终止页码 </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="  " class="editbox form-control form-control"  >
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>排版顺序号 </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="  " class="editbox form-control form-control"  >
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>	
+			<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>拟排版面号 </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="USER_NAMES" value="  " class="editbox form-control form-control"  >
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			
+			 
+			<tr height="10"></tr> 
+			
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>所属栏目</label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					 
+					 <select name="CATALOG_ID" class="combobox  form-control">
+					<option value='11'  >设计特稿</option>
+							  <option value='12'  >设计教育</option>
+							  <option value='13'  >设计方法</option>
+                              <option value='14'  >设计文化</option>
+                              <option value='15'  >设计历史</option>
+                              <option value='16'  >设计经典</option>
+                              <option value='17'  >设计实录</option>
+                              <option value='18'  >暂无分类</option>
+						
+					 </select>
+				</td>
+				 
+			</tr>
+ 
+		<tr height="10"></tr>  
+			<tr height="25" valign="bottom">
+				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
+					<label>排版说明 </label>
+				</td>
+				<td width="2%" bgcolor="#ffffff"></td>
+				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="FEE_ID" value=" " class="editbox form-control form-control"  >
+				</td>
+				<td width="6%" bgcolor="#ffffff"></td>
+			</tr>
+			
+			<tr height="10"></tr>  
+			 
+		</tbody></table>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ <!---返回格式审查--->
+ <div class="modal fade" id="recheck" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">返回格式审查</h4>
+            </div>
+            <div class="modal-body">是否返回格式审查？</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ <!---删除期刊--->
+ <div class="modal fade" id="deletemagazine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">删除期刊</h4>
+            </div>
+            <div class="modal-body">是否删除当前期刊，删除后将无法恢复。</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">删除</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ <!---编辑期刊--->
+ <div class="modal fade" id="editmagazine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 60%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">编辑</h4>
+            </div>
+            <div class="modal-body">
+			<table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" tyle="font-size:10pt" align="center">
+ 
+ 
+ 
+ 
+
+<tr height="25" valign="bottom">
+    <td colspan="7" bgcolor="#ffffff" valign="top" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <font color="#FF0000"> 注意：带*号项为必填项</font> </td>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊编号<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="PERIODICAL_ID" value="" class="editbox form-control" required="required">	
+    
+    </td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊类型<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<select name="PERIODICAL_TYPE" class="combobox form-control" required="required"><option value='a' selected >正刊</option><option value='b'  >专辑</option><option value='c'  >论丛</option></select>
+    </td>
+    <td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊名称<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="PERIODICAL_NAME" value="" class="editbox form-control" required="required">
+    </td> 	
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">卷号<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="VOLUMN" value="" class="editbox form-control" required="required">
+    </td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+  <tr height="10" valign="bottom"></tr>    
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期号<font id=fileid color="#ff0000">（*）</font></TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="ISSUE" value="" class="editbox form-control" required="required">
+	</td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">刊号</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="ISSN" value="" class="editbox form-control">
+	</td> 
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">本期起始页</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="START_PAGE_NUMBER" value="" class="editbox form-control">
+    </td>
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">本期终止页</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="END_PAGE_NUMBER" value="" class="editbox form-control">
+	</td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">条码值</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="BAR_CODE" value="" class="editbox form-control">
+    </td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">是否出版</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<select name="PUBLISH_FLAG" class="combobox form-control"><option value='0'  >预览版</option><option value='1'  >未出版</option><option value='2'  >已出版</option></select>
+    </td>
+	<!--<td width="15%" bgcolor="#ffffff" valign="middle" align="right">单价</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="PRICE" value="" class="editbox form-control">
+	</td>
+ 	--><td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">预出版日期</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	 <table cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%">
+	   <tr>
+	    <td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="PUBLISH_DATE_ASK" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly="" data-date-format="yyyy-mm-dd">
+				</td>
+	   </tr>
+	 </table>
+    </td>
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">实际出版日期<font id=fileid color="#ff0000">（*）</font></TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	 <table cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%">
+	   <tr>
+	   <td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="PUBLISH_DATE_FACT" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly="" data-date-format="yyyy-mm-dd" required="required">
+				</td>
+	     
+	   </tr>
+	 </table>
+    </td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="50" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊说明</td>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td colspan=4 bgcolor="#ffffff" valign="middle" align="left" >
+    <textarea name="PERIODICAL_MEM" rows="3" style="WIDTH:100%" class="form-control textareabox"></textarea>
+	</td> 
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+</table>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+               <button type="button" class="btn btn-primary timepicker"    >确定</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ <!---添加期刊--->
+ <div class="modal fade" id="addmagazine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 60%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">添加</h4>
+            </div>
+            <div class="modal-body">
+			<table border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%" bgcolor="#dee7ff" tyle="font-size:10pt" align="center">
+ 
+ 
+ 
+ 
+
+<tr height="25" valign="bottom">
+    <td colspan="7" bgcolor="#ffffff" valign="top" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <font color="#FF0000"> 注意：带*号项为必填项</font> </td>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊编号<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="PERIODICAL_ID" value="" class="editbox form-control" required="required">	
+    
+    </td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊类型<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<select name="PERIODICAL_TYPE" class="combobox form-control" required="required"><option value='a' selected >正刊</option><option value='b'  >专辑</option><option value='c'  >论丛</option></select>
+    </td>
+    <td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊名称<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="PERIODICAL_NAME" value="" class="editbox form-control" required="required">
+    </td> 	
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">卷号<font id=fileid color="#ff0000">（*）</font></td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="VOLUMN" value="" class="editbox form-control" required="required">
+    </td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+  <tr height="10" valign="bottom"></tr>    
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期号<font id=fileid color="#ff0000">（*）</font></TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="ISSUE" value="" class="editbox form-control" required="required">
+	</td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">刊号</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="ISSN" value="" class="editbox form-control">
+	</td> 
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">本期起始页</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="START_PAGE_NUMBER" value="" class="editbox form-control">
+    </td>
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">本期终止页</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="END_PAGE_NUMBER" value="" class="editbox form-control">
+	</td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">条码值</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<input type="text" name="BAR_CODE" value="" class="editbox form-control">
+    </td>
+    <td width="15%" bgcolor="#ffffff" valign="middle" align="right">是否出版</td>
+ 	<td width="5%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	<select name="PUBLISH_FLAG" class="combobox form-control"><option value='0'  >预览版</option><option value='1'  >未出版</option><option value='2'  >已出版</option></select>
+    </td>
+	<!--<td width="15%" bgcolor="#ffffff" valign="middle" align="right">单价</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+    <input type="text" name="PRICE" value="" class="editbox form-control">
+	</td>
+ 	--><td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="25" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">预出版日期</TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	 <table cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%">
+	   <tr>
+	    <td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="PUBLISH_DATE_ASK" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly="" data-date-format="yyyy-mm-dd">
+				</td>
+	   </tr>
+	 </table>
+    </td>
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">实际出版日期<font id=fileid color="#ff0000">（*）</font></TD>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td width="25%" bgcolor="#ffffff" valign="middle" align="left" >
+	 <table cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" width="100%">
+	   <tr>
+	   <td width="25%" bgcolor="#ffffff" valign="middle" align="left">
+					<input type="text" name="PUBLISH_DATE_FACT" value="" onkeydown="Keysubmit('search')" class="editbox form-control form-control form_date" readonly="" data-date-format="yyyy-mm-dd" required="required">
+				</td>
+	     
+	   </tr>
+	 </table>
+    </td>
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+<tr height="10" valign="bottom"></tr>
+<tr height="50" valign="bottom">
+	<td width="15%" bgcolor="#ffffff" valign="middle" align="right">期刊说明</td>
+ 	<td width="2%" bgcolor="#ffffff"></TD>
+	<td colspan=4 bgcolor="#ffffff" valign="middle" align="left" >
+    <textarea name="PERIODICAL_MEM" rows="3" style="WIDTH:100%" class="form-control textareabox"></textarea>
+	</td> 
+ 	<td width="6%" bgcolor="#ffffff"></TD>
+</tr>
+</table>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+               <button type="button" class="btn btn-primary timepicker"    >确定</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ 
+ <!---缴费凭证--->
  <div class="modal fade" id="paymentpicture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -547,7 +1045,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" value=" 朱付鄂" class="editbox form-control" disabled="">
+					<input type="text" name="USER_NAMES" value=" 朱付鄂" class="editbox form-control form-control" disabled="">
 				</td>
 									 
 					</tr>
@@ -563,7 +1061,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="0" class="editbox form-control" disabled="">
+					<input type="text" name="ARTICL_TITLE" value="0" class="editbox form-control form-control" disabled="">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -574,7 +1072,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_ASK" value="2000" class="editbox form-control" disabled="">
+					<input type="text" name="FEE_ASK" value="2000" class="editbox form-control form-control" disabled="">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>	
@@ -585,7 +1083,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_FACT" value="" class="editbox form-control">
+					<input type="text" name="FEE_FACT" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -623,7 +1121,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_ID" value=" " class="editbox form-control"  >
+					<input type="text" name="FEE_ID" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -634,7 +1132,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="TRANSFER_USER" value=" " class="editbox form-control"  >
+					<input type="text" name="TRANSFER_USER" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -645,7 +1143,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="VOUCHER_ID" value=" " class="editbox form-control"  >
+					<input type="text" name="VOUCHER_ID" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -656,7 +1154,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="TRANSFER_DATE" value=" " class="editbox form-control"  >
+					<input type="text" name="TRANSFER_DATE" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -667,7 +1165,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_MEM" value=" " class="editbox form-control"  >
+					<input type="text" name="FEE_MEM" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -742,7 +1240,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" value=" 朱付鄂" class="editbox form-control" disabled="">
+					<input type="text" name="USER_NAMES" value=" 朱付鄂" class="editbox form-control form-control" disabled="">
 				</td>
 									 
 					</tr>
@@ -758,7 +1256,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="0" class="editbox form-control" disabled="">
+					<input type="text" name="ARTICL_TITLE" value="0" class="editbox form-control form-control" disabled="">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -769,7 +1267,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_ASK" value="2000" class="editbox form-control" disabled="">
+					<input type="text" name="FEE_ASK" value="2000" class="editbox form-control form-control" disabled="">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>	
@@ -780,7 +1278,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_FACT" value="" class="editbox form-control">
+					<input type="text" name="FEE_FACT" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -818,7 +1316,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_ID" value=" " class="editbox form-control"  >
+					<input type="text" name="FEE_ID" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -829,7 +1327,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="TRANSFER_USER" value=" " class="editbox form-control"  >
+					<input type="text" name="TRANSFER_USER" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -840,7 +1338,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="VOUCHER_ID" value=" " class="editbox form-control"  >
+					<input type="text" name="VOUCHER_ID" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -851,7 +1349,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="TRANSFER_DATE" value=" " class="editbox form-control"  >
+					<input type="text" name="TRANSFER_DATE" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -862,7 +1360,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan="4" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FEE_MEM" value=" " class="editbox form-control"  >
+					<input type="text" name="FEE_MEM" value=" " class="editbox form-control form-control"  >
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -921,7 +1419,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" placeholder=" 朱付鄂" class="editbox form-control" disabled >
+					<input type="text" name="USER_NAMES" placeholder=" 朱付鄂" class="editbox form-control form-control" disabled >
 				</td>
 									 
 					</tr>
@@ -932,7 +1430,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="USER_NAMES" value="" class="editbox form-control">
+					<input type="text" name="USER_NAMES" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -943,14 +1441,14 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="QQ" value="" class="editbox form-control">
+					<input type="text" name="QQ" value="" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>微信号</label>
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="WECHART" value="" class="editbox form-control">
+					<input type="text" name="WECHART" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -963,7 +1461,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_COMPANY" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_COMPANY" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -974,7 +1472,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_ADRESS" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_ADRESS" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -985,7 +1483,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="OTHER_ADDRESS" value="" class="editbox form-control">
+					<input type="text" name="OTHER_ADDRESS" value="" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					<label>研究方向<font id=fileid color="#ff0000">（*）</font></label>
@@ -1034,7 +1532,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="FUNDING_NAME" value="" class="editbox form-control">
+					<input type="text" name="FUNDING_NAME" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -1045,7 +1543,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td width="25%" bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="DOI" value="" class="editbox form-control">
+					<input type="text" name="DOI" value="" class="editbox form-control form-control">
 				</td>
 				<td width="15%" bgcolor="#ffffff" valign="middle" align="right">
 					&nbsp;
@@ -1063,7 +1561,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -1085,7 +1583,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_KEYWORDS" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_KEYWORDS" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -1096,7 +1594,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_TITLE_EN" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_TITLE_EN" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>
@@ -1118,7 +1616,7 @@
 				</td>
 				<td width="2%" bgcolor="#ffffff"></td>
 				<td colspan=4 bgcolor="#ffffff" valign="middle" align="left">
-					<input type="text" name="ARTICL_KEYWORDS_EN" value="" class="editbox form-control">
+					<input type="text" name="ARTICL_KEYWORDS_EN" value="" class="editbox form-control form-control">
 				</td>
 				<td width="6%" bgcolor="#ffffff"></td>
 			</tr>	
@@ -1279,11 +1777,11 @@
 			
 			<div class="label-group col-lg-3">
 			<label>姓名 </label>
-			<input  type="text" name="USER_NAMES" value="" class="editbox form-control ">
+			<input  type="text" name="USER_NAMES" value="" class="editbox form-control form-control ">
 			</div>
 			<div class="label-group col-lg-3">
 			<label>单位 </label>
-			<input type="text" name="USER_COMPANY" value="" class="editbox form-control ">
+			<input type="text" name="USER_COMPANY" value="" class="editbox form-control form-control ">
 			</div>
 			<div class="label-group col-lg-3 ">
 			<label>研究方向 </label>
@@ -1375,7 +1873,7 @@
 	  
 		 <table  align="center" >
 		 <div   > 
-		 <tr class="tableitemcenter" background="../images/list_top.gif">
+		 <tr class="tableitemcenter"  >
     
     <td width="73" align="center">显示个数：</td>
     <td width="56" align="center">
@@ -1709,7 +2207,7 @@
 
 </table> 
 			
-			
+
 			
 			
 			</div>
@@ -1751,18 +2249,18 @@
  
 <div class="label-group col-lg-12">
 			<label>发件人 </label>
-			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control form-control">
 			<br>
 			</div>
 			
 			<div class="label-group col-lg-12">
 			<label>收件人 </label>
-			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，录用通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，录用通知信件。" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -1810,18 +2308,18 @@
  
 <div class="label-group col-lg-12">
 			<label>发件人 </label>
-			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control form-control">
 			<br>
 			</div>
 			
 			<div class="label-group col-lg-12">
 			<label>收件人 </label>
-			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，录用通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，录用通知信件。" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -1869,18 +2367,18 @@
  
 <div class="label-group col-lg-12">
 			<label>发件人 </label>
-			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control form-control">
 			<br>
 			</div>
 			
 			<div class="label-group col-lg-12">
 			<label>收件人 </label>
-			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，拒录通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，拒录通知信件。" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -1928,18 +2426,18 @@
  
 <div class="label-group col-lg-12">
 			<label>发件人 </label>
-			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control">
+			<input type="text" name="FROM" value="jdesign@whut.edu.cn" class="editbox form-control form-control">
 			<br>
 			</div>
 			
 			<div class="label-group col-lg-12">
 			<label>收件人 </label>
-			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control">
+			<input type="text" name="TO" value="499984532@qq.com" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
 			<label>邮件主题 </label>
-			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control">
+			<input type="text" name="TITLE" value="《设计艺术研究》编辑部网站，退稿通知信件。" class="editbox form-control form-control">
 			<br>
 			</div>
  <div class="label-group col-lg-12">
@@ -2636,7 +3134,7 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->	
 
-<!-----------------------------模态框 END------------------------------------>                         
+<!-----------------------------模态框 END------------------------------------>               
                            
 
 	
@@ -3877,4 +4375,7 @@ function Keysubmit()
   } 
 } 
 </script>
+	<script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.js" charset="utf-8"></script> 
+   <script type="text/javascript" src="../dist/js/bootstrap-datetimepicker.zh-CN.js" charset="utf-8"></script> 
+ <script type="text/javascript" src="../dist/js/timepickersetting.js" charset="utf-8"></script>
 		</div>	
